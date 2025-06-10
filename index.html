@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Yarışma</title>
+  </head>
+  <body>
+    <div class="welcome-screen" id="welcome-screen">
+      <div class="welcome-container">
+        <h1> Birg Tanıma Testi</h1>
+        <div class="welcome-content">
+          <p class="welcome-text">Merhaba! Teste hoş geldin! </p>
+          <p class="welcome-description">
+            Birgül hakkında ne kadar bilgin var görelim! 
+            17 sorudan oluşan bu testte Birgül'ü ne kadar yakından tanıdığını keşfedeceksin.
+            Eğlenceye ve başarısız olursan tribe hazır mısın?
+          </p>
+          <div class="name-input-section">
+            <label for="user-name">Adını gir:</label>
+            <input type="text" id="user-name" placeholder="Adın nedir?" maxlength="20">
+          </div>
+          <button class="start-btn" id="start-btn" onclick="startQuiz()">
+              Teste Başla
+          </button>
+        </div>
+      </div>
+    </div>
+
+        
+    <div class="quiz-screen" id="quiz-screen" style="display: none;">
+      <h1 id="quiz-title">Birg Tanıma Testi</h1>
+      <div class="quiz-container" id="quiz">
+      <div class="quiz-header">
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+        <div class="question-header">
+          <button class="back-btn" id="back-btn" onclick="goBack()">← Geri</button>
+          <div class="question-counter">
+            <span id="current-question">1</span> / <span id="total-questions">12</span>
+          </div>
+          <div class="spacer"></div>
+        </div>
+        <h2 id="question">Sorular gelecek</h2>
+        <ul>
+          <li>
+            <input type="radio" name="answer" id="a" class="answer" />
+            <label for="a" id="a_text">Cevap A</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="b" class="answer" />
+            <label for="b" id="b_text">Cevap B</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="c" class="answer" />
+            <label for="c" id="c_text">Cevap C</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="d" class="answer" />
+            <label for="d" id="d_text">Cevap D</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="e" class="answer" />
+            <label for="e" id="e_text">Cevap E</label>
+          </li>
+        </ul>
+      </div>
+      <button class="submit" id="submit">Evet</button>
+    </div>
+    </div>
+    
+    <script src="app.js"></script>
+  </body>
+</html>
